@@ -21,11 +21,8 @@ library(magrittr) # For the pipe
 source("cv_printing_functions.r")
 
 # Read in all data and initialize a CV printer object
-
-## click f2 in the function below and change line 32 to
-# googlesheets4::gs4_deauth()
-CV <- create_CV_object( 
-  data_location = "https://docs.google.com/spreadsheets/d/1HDcEn-lU49vdcht96f2sQXuA2b5g2J84PipYuTVBU7o/edit?usp=sharing",
+CV <- create_CV_object(
+  data_location = "data/",  
   pdf_mode = params$pdf_mode
 )
 
@@ -86,7 +83,7 @@ Disclaimer {#disclaimer}
 
 Made with the R package [**pagedown**](https://github.com/rstudio/pagedown). 
 
-The source code is available [on github.com/nstrayer/cv](https://github.com/ruampimentel/Pimentel_CV).
+The source code is available [on github.com/ruampimentel/Pimentel_CV](https://github.com/ruampimentel/Pimentel_CV).
 
 Last updated on `r Sys.Date()`.
 
@@ -166,7 +163,7 @@ CV %<>% print_text_block('data_science_writing_aside')
 :::
 
 ```{r}
-CV %<>% print_section('data_science_writings')
+# CV %<>% print_section('data_science_writings')
 ```
 
 
@@ -175,7 +172,7 @@ Selected Press (About)  {data-icon=newspaper}
 --------------------------------------------------------------------------------
 
 ```{r}
-CV %<>% print_section('about_me_press')
+# CV %<>% print_section('about_me_press')
 ```
 
 
@@ -187,7 +184,7 @@ Selected Press (By)  {data-icon=newspaper}
 --------------------------------------------------------------------------------
 
 ```{r}
-CV %<>% print_section('by_me_press')
+# CV %<>% print_section('by_me_press')
 ```
 
 
