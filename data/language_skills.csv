@@ -1,7 +1,18 @@
-﻿Name of language,Relative numeric level of skill
-skill,level
-Portuguese (Native),5
-English,4.6
-Spanish,4.6
-Italian,3.5
-French,2
+﻿,Name of language,Relative numeric level of skill
+section,skill,level
+language,Portuguese (Native),5
+language,English,4.6
+language,Spanish,4.6
+language,Italian,3.5
+language,French,1
+tech,R,4.5
+tech,SPSS,4.4
+tech,SQL,3
+r_package,tidyverse,4
+r_package,tidymodels,3.25
+r_package,rmarkdown,3.5
+stats,Psychometrics,
+stats,Expert in R and R Studio with emphasis on the Tidyverse,
+stats,Data wrangling,
+stats,Github,
+stats,Some Python and SQL,

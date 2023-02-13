@@ -130,7 +130,6 @@ sanitize_links <- function(cv, text){
   list(cv = cv, text = text)
 }
 
-
 #' @description Take a position data frame and the section id desired and prints the section to markdown.
 #' @param section_id ID of the entries section to be printed as encoded by the `section` column of the `entries` table
 print_section <- function(cv, section_id, glue_template = "default"){
@@ -177,7 +176,6 @@ print_text_block <- function(cv, label){
   strip_res <- sanitize_links(cv, text_block)
 
   cat(strip_res$text)
-
   invisible(strip_res$cv)
 }
 
@@ -236,5 +234,88 @@ print_contact_info <- function(cv){
     "- <i class='fa fa-{icon}'></i> {contact}"
   ) %>% print()
 
+  invisible(cv)
+}
+
+
+#' @description Take a Zotero exported file and turn the section id desired and prints the section to markdown.
+#' @param section_id ID of the entries section to be printed as encoded by the `item_type` column of the `zotero_clean` data (from Zotero)
+
+print_output_section <- function(cv, section) {
+  section_data <- cv %>%
+    filter(item_type == section) %>%
+    arrange(desc(date), author) %>% 
+    mutate(author = str_replace_all(author, "Pimentel", "**Pimentel**" ),
+           publication_title = if_else(!is.na( publication_title ),
+                                       paste0("*", publication_title, "*"),
+                                       publication_title),
+           volume = ifelse(!is.na( volume ),
+                           paste0("*", volume, "*"),
+                           volume),
+           issue = ifelse(!is.na( issue ),
+                          paste0("(", issue, ")"),
+                          issue)
+    ) 
+  
+  if (section == "conferencePaper") {
+    section_data %>%
+      glue::glue_data(
+        "{author}
+      {date}:   {conference_name}
+      <br>
+
+      \n\n\n
+      ", 
+      .na = ""
+      ) %>%
+      print()
+  } else if (section == "journalArticle" ) {
+    section_data %>%
+      glue::glue_data(
+        "{author}. {publication_year}. {title}. {publication_title}. DOI: {doi}.  {volume} {issue}.
+      <br>
+
+      \n\n\n
+      ", 
+      .na = ""
+      ) %>%
+      print()
+  } else if (section == "manuscript" ) {
+    section_data %>%
+      glue::glue_data(
+        "{author}
+      {date}:   {publication_title}
+      <br>
+
+      \n\n\n
+      ", 
+      .na = ""
+      ) %>%
+      print()
+  } else if (section == "presentation" ) {
+    section_data %>%
+      glue::glue_data(
+        "{author}
+      {date}:   {conference_name}
+      <br>
+
+      \n\n\n
+      ", 
+      .na = ""
+      ) %>%
+      print()
+  } else if (section == "thesis" ) {
+    section_data %>%
+      glue::glue_data(
+        "{author}
+      {date}:   {conference_name}
+      <br>
+
+      \n\n\n
+      ", 
+      .na = ""
+      ) %>%
+      print()
+  }
   invisible(cv)
 }

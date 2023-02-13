@@ -9,16 +9,20 @@ output:
   pagedown::html_resume:
     css: ['dd_cv.css', 'resume']
     self_contained: true
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r, include=FALSE}
 knitr::opts_chunk$set(
-  results='asis', 
+  results = 'asis', 
   echo = FALSE
 )
-
+library(readr)
 library(magrittr) # For the pipe
+library(stringr)
 source("cv_printing_functions.r")
+source("helper_functions.R")
 
 # Read in all data and initialize a CV printer object
 CV <- create_CV_object(
@@ -26,8 +30,24 @@ CV <- create_CV_object(
   pdf_mode = params$pdf_mode
 )
 
-```
+zotero <- read_csv("all_pimentel_2023-02-10.csv") %>% janitor::clean_names()
 
+zotero_cleaned <- zotero %>%
+  select(item_type:publication_title, doi, url, date, pages, num_pages, issue, volume,
+         conference_name) %>% 
+  mutate(count_authors = str_count(author, ";") + 1,
+         author = str_replace_all(author,
+                                  "\\b([A-Za-zçé])[A-Za-zçé]* ",
+                                  "\\1. ") %>% 
+           str_replace_all("\\b([A-Za-zçé])[A-Za-zçé]*;",
+                           "\\1. ;") %>% 
+           str_replace_all("\\b([A-Za-zçé])[A-Za-zçé]*$",
+                           "\\1.") %>% 
+           str_replace_all("\\b([a-zçé])[a-zçé]*.","") %>% 
+           str_replace_all(". ;", ".;"),
+         author = str_replace(author, ";(?!.*;)", ", &"))
+
+```
 
 ```{r}
 # When in pdf export mode the little dots are unaligned, so fix that with some conditional CSS.
@@ -41,16 +61,17 @@ if(params$pdf_mode) {
 }
 ```
 
+# Aside
 
-Aside
-================================================================================
+<!-- Swap image with your preferred logo -->
+
+<!--![logo](https://cran.r-project.org/Rlogo.svg){width=100%} -->
 
 ```{r}
 # Build interactive network of positions colored by section
 # and connected if they occurred in the same year
-datadrivencv::build_network_logo(CV$entries_data)
+# datadrivencv::build_network_logo(CV$entries_data)
 ```
-
 
 ```{r}
 if(params$pdf_mode){
@@ -60,68 +81,59 @@ if(params$pdf_mode){
 }
 ```
 
-Contact {#contact}
---------------------------------------------------------------------------------
+## Contact {#contact}
 
 ```{r}
 CV %>% print_contact_info()
 ```
 
+## Relevant skills {#skills}
 
+-   Statistics
+-   Data Visualization
+-   Multivariate Analysis
+-   Structural Equation Modeling
+-   Psychometrics
+-   AI, ML, including NLP
 
-Language Skills {#skills}
---------------------------------------------------------------------------------
+## Language {#language}
 
-```{r}
-CV %>% print_skill_bars()
+```{r rskills, dev.args = list(bg = 'transparent')}
+# function from helper_functions.R
+build_skill_bars(CV$skills, "language")
+
 ```
 
+## Disclaimer {#disclaimer}
 
+Made with the R package [**pagedown**](https://github.com/rstudio/pagedown).
 
-Disclaimer {#disclaimer}
---------------------------------------------------------------------------------
-
-Made with the R package [**pagedown**](https://github.com/rstudio/pagedown). 
-
-The source code is available [on github.com/ruampimentel/Pimentel_CV](https://github.com/ruampimentel/Pimentel_CV).
+The source code is available [on github.com/ruampimentel/ Pimentel_CV](https://github.com/ruampimentel/Pimentel_CV).
 
 Last updated on `r Sys.Date()`.
 
+# Main
 
-
-Main
-================================================================================
-
-Ruam P. F. A. Pimentel {#title}
---------------------------------------------------------------------------------
+## Ruam P. F. A. Pimentel {#title}
 
 ```{r}
 # Note the special double pipe so we modify the CV object in place
 CV %<>% print_text_block("intro") 
 ```
 
-
-
-Education {data-icon=graduation-cap data-concise=true}
---------------------------------------------------------------------------------
+## Education {data-icon="graduation-cap" data-concise="true"}
 
 ```{r}
 CV %<>% print_section('education')
 ```
 
-
-
-Research Experience {data-icon=laptop}
---------------------------------------------------------------------------------
+## Research Experience {data-icon="laptop"}
 
 ```{r}
 CV %<>% print_section('research_positions')
 ```
 
-
-
-Industry Experience {data-icon=suitcase}
---------------------------------------------------------------------------------
+## Industry Experience {data-icon="suitcase"}
 
 ::: aside
 ```{r}
@@ -134,12 +146,10 @@ CV %<>% print_text_block('industy_experience_aside')
 ```
 
 <!-- These breaks just force a new page so section doesnt get cut off -->
-<br>
-<br>
-<br>
 
-Teaching Experience {data-icon=chalkboard-teacher}
---------------------------------------------------------------------------------
+<br> <br> <br>
+
+## Teaching Experience {data-icon="chalkboard-teacher"}
 
 ::: aside
 ```{r}
@@ -151,10 +161,7 @@ CV %<>% print_text_block('teaching_experience_aside')
 CV %<>% print_section('teaching_positions')
 ```
 
-
-
-Selected Data Science Writing {data-icon=chart-line}
---------------------------------------------------------------------------------
+## Selected Data Science Writing {data-icon="chart-line"}
 
 ::: aside
 ```{r}
@@ -162,43 +169,74 @@ CV %<>% print_text_block('data_science_writing_aside')
 ```
 :::
 
+<br> <br>
+
 ```{r}
-# CV %<>% print_section('data_science_writings')
+
+
+
+# cv_data %>% glimpse()
+# cv_data %>%
+#   mutate(author = str_replace_all(author, "Pimentel", "**Pimentel**" ),
+#          publication_title = if_else(!is.na(publication_title),
+#                                     paste0("*", publication_title, "*"),
+#                                     publication_title)
+#          ) %>%
+#   filter(item_type == "manuscript")
+#   glimpse()
+
 ```
 
 
-
-Selected Press (About)  {data-icon=newspaper}
---------------------------------------------------------------------------------
-
 ```{r}
-# CV %<>% print_section('about_me_press')
+
 ```
 
 
-<br>
-<br>
-
-
-Selected Press (By)  {data-icon=newspaper}
---------------------------------------------------------------------------------
-
-```{r}
-# CV %<>% print_section('by_me_press')
-```
-
-
-
-Selected Publications, Posters, and Talks {data-icon=book}
---------------------------------------------------------------------------------
+## Selected Publications, Posters, and Talks {data-icon="book"}
 
 ```{r}
 CV %<>% print_section('academic_articles')
 ```
 
+## Publication
+
+
 
 
 ```{r}
-CV %<>% print_links()
+
+print_output_section(zotero_cleaned, "journalArticle")
+
 ```
+
+## Conference Paper
+
+```{r}
+print_output_section(zotero_cleaned, "conferencePaper")
+```
+
+## thesis
+```{r}
+print_output_section(zotero_cleaned, "thesis")
+
+```
+
+## Thesis
+```{r}
+print_output_section(zotero_cleaned, "journalArticle")
+```
+
+## Manuscript
+```{r}
+print_output_section(zotero_cleaned, "manuscript")
+
+
+```
+
+## Presentation
+```{r}
+print_output_section(zotero_cleaned, "presentation")
+```
+
 

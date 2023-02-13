@@ -4,41 +4,10 @@ education,"PhD. Candidate, Psychology, Quantitative Psychology (Minor)",Universi
 education,"M.S., Psychology, Psychological Assessment (Area)",Universidade São Francisco,"Campinas, SP (Brazil)",2018,2019,Thesis: ...,Teaching Assistant,,,
 education,Specialization in Neuroscience (300 hrs),Universidade Federal de São Paulo ,"Santos, SP (Brazil)",2018,2019,Thesis: ...,,,,
 education,"B.S., Psychology",CEULP/ULBRA,"Palmas, TO (Brazil)",2012,2017,Thesis: ...,Teaching and Research Assistant,,,TRUE
-research_positions,Normative Data Collection Coordinator (Research Assistant),,Rorschach Perfomance Assessment System (R-PAS),2021,,"
-Organize international data collection across 17 countries.
-","Provide resources for data collectors
-",[to be update],,FALSE
+research_positions,Normative Data Collection Coordinator (Research Assistant),Rorschach Perfomance Assessment System (R-PAS),,2021,,Organize international data collection across 17 countries.,Provide resources for data collectors,[to be update],,FALSE
 research_positions,Translation and Adaptation of the Personality Assessment Inventory to Portuguese (Research Assistant),,,2020,,Assist in all drafts and analysis.,Organize and clean items for translation.,Backtranslation (Portuguese to English).,"Run psychometrics (e.g., internal consistency, validity studies, norms).",FALSE
-research_positions,Teaching Assistant,,The University of Toledo,2019,2021,Statistical Methods 1 (for grad student),Statistical Methods 2 (for grad student),Personality (for undegrad),Statistics (for undergrad),FALSE
-research_positions,Teaching Assistant,,Universidade São Francisco,2018,2019,Thesis advising I (for undegrad),Thesis advising II (for undergrad),,,FALSE
-research_positions,Teaching Assistant,,CEULP/ULBRA,2014,2017,Morphophysiology and human behavior,Methods of psychological assessment,Psychological assessment,Neuropsychological assessment,TRUE
-teaching_positions,Javascript for Shiny Users,RStudio::conf 2020,N/A,,2020,Served as TA for two day workshop on how to leverage Javascript in Shiny applications,Lectured on [using R2D3 package to build interactive visualizations.](http://nickstrayer.me/js4shiny_r2d3/slides),,,FALSE
-teaching_positions,Statistical Computing in R,Vanderbilt Biostatistics Department,"Nashville, TN",2017,2017,TA and lectured,Covered introduction to R language for statistics applications,Graduate level class,,FALSE
-teaching_positions,Advanced Statistical Learning and Inference,Vanderbilt Biostatistics Department,"Nashville, TN",2017,2018,TA and lectured,Topics covered from penalized regression to boosted trees and neural networks,Highest level course offered in department,,FALSE
-teaching_positions,Advanced Statistical Computing,Vanderbilt Biostatistics Department,"Nashville, TN",2018,2018,TA and lectured,Covered modern statistical computing algorithms,4th year PhD level class,,FALSE
-teaching_positions,Data Visualization Best Practices,DataCamp,,2019,2019,Designed from bottom up course to teach best practices for scientific visualizations.,Uses R and ggplot2.,In top 10% on platform by popularity.,,FALSE
-teaching_positions,Improving your visualization in Python,DataCamp,,2019,2019,Designed from bottom up course to teach advanced methods for enhancing visualization.,"Uses python, matplotlib, and seaborn.",,,FALSE
-academic_articles,Asymmetric Linkage Disequilibrium: Tools for Dissecting Multiallelic LD,Journal of Human Immunology,,2015,2015,journalArticle,,,,TRUE
+teaching_positions,Teaching Assistant,The University of Toledo,,2019,2021,Statistical Methods 1 (for grad student),Statistical Methods 2 (for grad student),Personality (for undegrad),Statistics (for undergrad),FALSE
+teaching_positions,Teaching Assistant,Universidade São Francisco,,2018,2019,Thesis advising I (for undegrad),Thesis advising II (for undergrad),,,FALSE
+teaching_positions,Teaching Assistant,CEULP/ULBRA,,2014,2017,Morphophysiology and human behavior,Methods of psychological assessment,Psychological assessment,Neuropsychological assessment,TRUE
 academic_articles,"Funcionamento patológico da personalidade para predição da depressão, qualidade de vida e esperança",International Association of Great Lakes Research Conference,,2015,2015,manuscript,,,,FALSE
 academic_articles,A cross-cultural investigation from nine countries of empathic and antisocial profiles' adherence to COVID-19 containment measures,Journal of Great Lakes Research,,2015,2015,thesis,,,,FALSE
-academic_articles,Coding criteria for Breaking the Card Boundary (BCB),Vanderbilt Biostatistics Qualification Exam,,2017,2017,presentation,Successfully met qualifying examination standards,,,FALSE
-academic_articles,Comparing committed Forensic Inpatients to Non-Patients Instructed to Malinger Insanity of Not Using Scores from the Rorschach task and Self-report,Chest,,2019,2019,thesis,,,,TRUE
-academic_articles,Malingering severe psychopathology on the Rorschach task: Systematic review and meta-analysis,Under-Review (copy available upon request.),,2018,2018,journalArticle,,,,FALSE
-academic_articles,Impacto de Exergames na qualidade de vida de idosos,RStudio::conf 2019,,2019,2019,conferencePaper,,,,TRUE
-academic_articles,Sentiment Analysis in Rorschach responses [e-poster for online conference].,Vanderbilt Biostatistics Seminar Series,,2019,2019,conferencePaper,,,,FALSE
-academic_articles,Relation between R-PAS and BFI2 moderate by R-PAS self-perception indicators: preliminary studies [Paper presentation],Under-Review (copy available upon request.),,,2019,conferencePaper,Analysis done using method built for my dissertation.,,,FALSE
-academic_articles,The influence of emotional valence over Source Memory in Aging [Paper Presentation],ENAR 2020,,,2020,conferencePaper,How and why building an R package can benefit methodological research,,,FALSE
-academic_articles,What do we know about the Source Memory in Aging? A review [Paper presentation],RStudio::conf 2020,,,2020,presentation,Focus on how software development and methodological research can improve both benefit when done in tandem.,,,TRUE
-academic_articles,Comparing Patients with Schizophrenia to Non-Patients Instructed to Malinger Insanity or Not Using Scores from the Rorschach Task and Self-Report,Under-Review (copy available upon request.),,,2019,presentation,Analysis done using method built for my dissertation.,,,FALSE
-academic_articles,Assessing Potential R-PAS Score Differences for In-Person and Remote Administration,Bioinformatics,,,2020,presentation,See [landing page](https://prod.tbilab.org/phewas_me_info/) for more information.,,,FALSE
-academic_articles,Aplicativo de administração remota do R-PAS: Dados preliminares de equivalência (R-PAS Remote Administration Application: Preliminary equivalence data),,,,,presentation,,,,
-academic_articles,Avanços digitais na aplicação do teste de Rorschach: Desenvolvimento do aplicativo de administração do R-PAS (Digital advances in the administration of the Rorschach test: Development of the R-PAS administration app),,,,,presentation,,,,
-academic_articles,Avanços digitais na aplicação do teste de Rorschach: Uso do aplicativo de administração do R-PAS (Digital advances in the administration of the Rorschach test: Use of the R-PAS administration app),,,,,presentation,,,,
-academic_articles,"One for All and All for One: Culture, Personality, and Governmental Policies Predicting Mask-Wearing in an International Sample",,,,,presentation,,,,
-academic_articles,Opções e Desafios da pesquisa com Testes de Perfomance em tempos pandêmicos (Options and Challenges of Research with Performance Tests in Pandemic Times),,,,,presentation,,,,
-academic_articles,"Beyond the ‘Mask Wars’: Cross-national comparison of health protective behaviors, government compliance, and empathy",,,,,presentation,,,,
-academic_articles,The Pfister colored pyramid test and its use in C/TA,,,,,presentation,,,,
-academic_articles,Sistema de Avaliação por Performance no Rorschach: Uma Breve Introdução ao R-PAS (Rorschach Perfomance Assessment System: A brief introduction to R-PAS),,,,,presentation,,,,
-academic_articles,Sistema de Avaliação por Performance no Rorschach Itermediário: Administração e Codifição (Intermediate Rorschach Performance Assessment System: Administration and Coding),,,,,presentation,,,,
-academic_articles,Rorschach and Depressive Behaviors: Potential depressive related behaviors discriminating patients with and without depressive symptoms and controls,,,,,presentation,,,,
-academic_articles,Assessing Potential R-PAS Score Differences for Inperson and Remote Administration,,,,,,,,,

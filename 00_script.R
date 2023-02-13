@@ -11,14 +11,14 @@ library(datadrivencv)
 # download_octicons()
 # download_simple_icons()
 
-datadrivencv::use_datadriven_cv(
-  full_name = "Ruam P. F. A. Pimentel",
-  data_location = "data/",
-  pdf_location = "https://github.com/ruampimentel/Pimentel_CV/Pimentel_cv.pdf",
-  html_location = "ruampimentel.me/cv/",
-  source_location = "https://github.com/ruampimentel/Pimentel_CV",
-  use_network_logo = TRUE # turn it false later and use this space for other stuff
-)
+# datadrivencv::use_datadriven_cv(
+#   full_name = "Ruam P. F. A. Pimentel",
+#   data_location = "data/",
+#   pdf_location = "https://github.com/ruampimentel/Pimentel_CV/Pimentel_cv.pdf",
+#   html_location = "ruampimentel.me/cv/",
+#   source_location = "https://github.com/ruampimentel/Pimentel_CV",
+#   use_network_logo = TRUE # turn it false later and use this space for other stuff
+# )
 
 
 
