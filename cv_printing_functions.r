@@ -260,8 +260,7 @@ print_output_section <- function(cv, section) {
   if (section == "conferencePaper") {
     section_data %>%
       glue::glue_data(
-        "{author}
-      {date}:   {conference_name}
+        "{author}. {date}. _{title}_. {conference_name}. {place}.
       <br>
 
       \n\n\n
@@ -283,8 +282,7 @@ print_output_section <- function(cv, section) {
   } else if (section == "manuscript" ) {
     section_data %>%
       glue::glue_data(
-        "{author}
-      {date}:   {publication_title}
+        "{author} {date}. _{title}_. 
       <br>
 
       \n\n\n
@@ -295,8 +293,7 @@ print_output_section <- function(cv, section) {
   } else if (section == "presentation" ) {
     section_data %>%
       glue::glue_data(
-        "{author}
-      {date}:   {conference_name}
+        "{author} {date}. _{title}_. [{type}]. {meeting_name}. {place}.
       <br>
 
       \n\n\n
@@ -307,8 +304,7 @@ print_output_section <- function(cv, section) {
   } else if (section == "thesis" ) {
     section_data %>%
       glue::glue_data(
-        "{author}
-      {date}:   {conference_name}
+        "{author} {date}. _{title}_. [{type}]. {publisher}.
       <br>
 
       \n\n\n

@@ -31,10 +31,11 @@ CV <- create_CV_object(
 )
 
 zotero <- read_csv("all_pimentel_2023-02-10.csv") %>% janitor::clean_names()
+# zotero %>% glimpse()
 
 zotero_cleaned <- zotero %>%
   select(item_type:publication_title, doi, url, date, pages, num_pages, issue, volume,
-         conference_name) %>% 
+         conference_name, place, type, meeting_name, publisher) %>% 
   mutate(count_authors = str_count(author, ";") + 1,
          author = str_replace_all(author,
                                   "\\b([A-Za-zçé])[A-Za-zçé]* ",
@@ -173,8 +174,6 @@ CV %<>% print_text_block('data_science_writing_aside')
 
 ```{r}
 
-
-
 # cv_data %>% glimpse()
 # cv_data %>%
 #   mutate(author = str_replace_all(author, "Pimentel", "**Pimentel**" ),
@@ -185,6 +184,15 @@ CV %<>% print_text_block('data_science_writing_aside')
 #   filter(item_type == "manuscript")
 #   glimpse()
 
+# not_all_na <- function(x) any(!is.na(x))
+# not_any_na <- function(x) all(!is.na(x))
+# 
+# 
+zotero_cleaned %>%
+  filter(item_type == "thesis") %>%
+  arrange(desc(date), author) %>%
+  # select(where(not_all_na)) %>%
+  glimpse()
 ```
 
 
@@ -202,8 +210,6 @@ CV %<>% print_section('academic_articles')
 ## Publication
 
 
-
-
 ```{r}
 
 print_output_section(zotero_cleaned, "journalArticle")
@@ -219,7 +225,6 @@ print_output_section(zotero_cleaned, "conferencePaper")
 ## thesis
 ```{r}
 print_output_section(zotero_cleaned, "thesis")
-
 ```
 
 ## Thesis
@@ -230,8 +235,6 @@ print_output_section(zotero_cleaned, "journalArticle")
 ## Manuscript
 ```{r}
 print_output_section(zotero_cleaned, "manuscript")
-
-
 ```
 
 ## Presentation
