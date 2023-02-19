@@ -47,7 +47,7 @@ zotero_cleaned <- zotero %>%
                            "\\1.") %>% 
            str_replace_all("\\b([a-zçé])[a-zçé]*.","") %>% 
            str_replace_all(". ;", ".;"),
-         author = str_replace(author, ";(?!.*;)", ", &"))
+         author = str_replace(author, ";(?!.*;)", " &"))
 
 ```
 
@@ -76,11 +76,11 @@ if(params$pdf_mode) {
 ```
 
 ```{r}
-if(params$pdf_mode){
-  cat("View this CV online with links at _ruampimentel.me/cv/_")
-} else {
-  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/ruampimentel/Pimentel_CV/blob/main/cv.pdf)")
-}
+# if(params$pdf_mode){
+#   cat("View this CV online with links at _ruampimentel.me/cv/_")
+# } else {
+#   cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/ruampimentel/Pimentel_CV/blob/main/cv.pdf)")
+# }
 ```
 
 ## Contact {#contact}
@@ -96,7 +96,6 @@ CV %>% print_contact_info()
 -   Multivariate Analysis
 -   Structural Equation Modeling
 -   Psychometrics
--   AI, ML, including NLP
 
 ## Language {#language}
 
@@ -141,7 +140,7 @@ CV %<>% print_section('research_positions')
 
 ::: aside
 ```{r}
-CV %<>% print_text_block('industy_experience_aside')
+# CV %<>% print_text_block('industy_experience_aside')
 ```
 :::
 
@@ -207,7 +206,9 @@ print_output_section(zotero_cleaned, "journalArticle")
 
 
 
-## Conference Presentations
+## Conference Presentations {data-icon="comments"}
+
+
 
 ::: aside
 I have presented most of my work at conferences so far. I am now transitioning to publishing it more in journals rather than just in conferences.
@@ -230,4 +231,10 @@ print_output_section(zotero_cleaned, "thesis")
 
 
 
+## Miscellaneous
 
+### Webmaster for Psychological Assessment Lab
+
+### this and that
+
+#### but also this

@@ -260,7 +260,7 @@ print_output_section <- function(cv, section) {
   if (section == "conferencePaper") {
     section_data %>%
       glue::glue_data(
-        "{author}. {date}. _{title}_. {conference_name}. {place}.
+        "{author} {date}. _{title}_. {conference_name}. {place}.
       <br>
 
       \n\n\n
@@ -271,7 +271,7 @@ print_output_section <- function(cv, section) {
   } else if (section == "journalArticle" ) {
     section_data %>%
       glue::glue_data(
-        "{author}. {publication_year}. {title}. {publication_title}. DOI: {doi}.  {volume} {issue}.
+        "{author} {publication_year}. {title}. {publication_title}. DOI: {doi}.  {volume} {issue}.
       <br>
 
       \n\n\n
