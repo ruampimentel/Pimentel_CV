@@ -79,7 +79,7 @@ if(params$pdf_mode) {
 if(params$pdf_mode){
   cat("View this CV online with links at _ruampimentel.me/cv/_")
 } else {
-  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/ruampimentel/Pimentel_CV/Pimentel_cv.pdf)")
+  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/ruampimentel/Pimentel_CV/blob/main/cv.pdf)")
 }
 ```
 
