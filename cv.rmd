@@ -235,6 +235,3 @@ print_output_section(zotero_cleaned, "thesis")
 
 ### Webmaster for Psychological Assessment Lab
 
-### this and that
-
-#### but also this
