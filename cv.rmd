@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
   echo = FALSE
 )
 library(readr)
-library(magrittr) # For the pipe
+library(magrittr)
 library(stringr)
 source("cv_printing_functions.r")
 source("helper_functions.R")
@@ -30,7 +30,8 @@ CV <- create_CV_object(
   pdf_mode = params$pdf_mode
 )
 
-zotero <- read_csv("all_pimentel_2023-02-10.csv") %>% janitor::clean_names()
+zotero <- read_csv("all_pimentel_2023-02-18.csv") %>% 
+  janitor::clean_names()
 # zotero %>% glimpse()
 
 zotero_cleaned <- zotero %>%
@@ -113,6 +114,8 @@ The source code is available [on github.com/ruampimentel/ Pimentel_CV](https://g
 
 Last updated on `r Sys.Date()`.
 
+
+
 # Main
 
 ## Ruam P. F. A. Pimentel {#title}
@@ -127,6 +130,7 @@ CV %<>% print_text_block("intro")
 ```{r}
 CV %<>% print_section('education')
 ```
+<br> <br> <br>
 
 ## Research Experience {data-icon="laptop"}
 
@@ -134,7 +138,6 @@ CV %<>% print_section('education')
 CV %<>% print_section('research_positions')
 ```
 
-## Industry Experience {data-icon="suitcase"}
 
 ::: aside
 ```{r}
@@ -148,7 +151,8 @@ CV %<>% print_text_block('industy_experience_aside')
 
 <!-- These breaks just force a new page so section doesnt get cut off -->
 
-<br> <br> <br>
+
+<br> <br> 
 
 ## Teaching Experience {data-icon="chalkboard-teacher"}
 
@@ -161,15 +165,8 @@ CV %<>% print_text_block('teaching_experience_aside')
 ```{r}
 CV %<>% print_section('teaching_positions')
 ```
-
-## Selected Data Science Writing {data-icon="chart-line"}
-
-::: aside
-```{r}
-CV %<>% print_text_block('data_science_writing_aside')
-```
-:::
-
+<br> <br>
+<br> <br>
 <br> <br>
 
 ```{r}
@@ -188,32 +185,36 @@ CV %<>% print_text_block('data_science_writing_aside')
 # not_any_na <- function(x) all(!is.na(x))
 # 
 # 
-zotero_cleaned %>%
-  filter(item_type == "thesis") %>%
-  arrange(desc(date), author) %>%
-  # select(where(not_all_na)) %>%
-  glimpse()
+# zotero_cleaned %>%
+#   filter(item_type == "thesis") %>%
+#   arrange(desc(date), author) %>%
+#   # select(where(not_all_na)) %>%
+#   glimpse()
 ```
 
-
 ```{r}
-
+# CV %<>% print_section('academic_articles')
 ```
 
-
-## Selected Publications, Posters, and Talks {data-icon="book"}
-
-```{r}
-CV %<>% print_section('academic_articles')
-```
-
-## Publication
-
+## Publications {data-icon="book"}
+::: aside
+My main responsibility in studies where I was not the first author involved data collection, data cleaning, data analysis, data visualization, and writing up results.
+:::
 
 ```{r}
-
 print_output_section(zotero_cleaned, "journalArticle")
+```
 
+
+
+## Conference Presentations
+
+::: aside
+I have presented most of my work at conferences so far. I am now transitioning to publishing it more in journals rather than just in conferences.
+:::
+
+```{r}
+print_output_section(zotero_cleaned, "presentation")
 ```
 
 ## Conference Paper
@@ -222,24 +223,11 @@ print_output_section(zotero_cleaned, "journalArticle")
 print_output_section(zotero_cleaned, "conferencePaper")
 ```
 
-## thesis
+## Unpublished Work
 ```{r}
 print_output_section(zotero_cleaned, "thesis")
 ```
 
-## Thesis
-```{r}
-print_output_section(zotero_cleaned, "journalArticle")
-```
 
-## Manuscript
-```{r}
-print_output_section(zotero_cleaned, "manuscript")
-```
-
-## Presentation
-```{r}
-print_output_section(zotero_cleaned, "presentation")
-```
 
 
