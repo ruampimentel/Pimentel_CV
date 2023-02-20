@@ -76,11 +76,11 @@ if(params$pdf_mode) {
 ```
 
 ```{r}
-# if(params$pdf_mode){
-#   cat("View this CV online with links at _ruampimentel.me/cv/_")
-# } else {
-#   cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/ruampimentel/Pimentel_CV/blob/main/cv.pdf)")
-# }
+if(params$pdf_mode){
+  cat("View this CV online with links at [ruampimentel.github.io/Pimentel_CV/cv.html](https://ruampimentel.github.io/Pimentel_CV/cv.html)")
+} else {
+  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/ruampimentel/Pimentel_CV/blob/main/cv.pdf)")
+}
 ```
 
 ## Contact {#contact}
@@ -220,11 +220,19 @@ print_output_section(zotero_cleaned, "presentation")
 
 ## Conference Paper
 
+
 ```{r}
 print_output_section(zotero_cleaned, "conferencePaper")
 ```
 
+
+
 ## Unpublished Work
+
+::: aside
+My works that have not been published include manuscripts that are still in preparation and guidelines for coding new behaviors on the Rorschach task. These guidelines were used in some of my published work, but never published independently.
+:::
+
 ```{r}
 print_output_section(zotero_cleaned, "thesis")
 ```
@@ -233,5 +241,7 @@ print_output_section(zotero_cleaned, "thesis")
 
 ## Miscellaneous
 
-### Webmaster for Psychological Assessment Lab
+```{r}
+CV %<>% print_section('miscellaneous')
+```
 
