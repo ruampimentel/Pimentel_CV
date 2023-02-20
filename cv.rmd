@@ -90,7 +90,7 @@ CV %>% print_contact_info()
 ```
 
 ## Relevant skills {#skills}
-Can you see this? [delete later]
+
 -   Statistics
 -   Data Visualization
 -   Multivariate Analysis
