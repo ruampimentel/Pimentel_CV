@@ -8,7 +8,7 @@ I'm creating this data driven CV following the these tutorials:
 2. http://nickstrayer.me/datadrivencv/
 3. https://annekelincoln.com/resume-in-r/
 
-[test](cv.html)
+[My CV](cv.html)
 # Todo
 - [ ] Update "print_output_section" function with APA norms.
 
