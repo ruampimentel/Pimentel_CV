@@ -226,7 +226,8 @@ I have presented most of my work at conferences so far. I am now transitioning t
 print_output_section(zotero_cleaned, "presentation")
 ```
 
-## Conference Paper
+## Conference Paper {data-icon="newspaper-o"}
+
 
 
 ```{r}
@@ -235,7 +236,7 @@ print_output_section(zotero_cleaned, "conferencePaper")
 
 
 
-## Unpublished Work
+## Unpublished Work {data-icon="pencil"}
 
 ::: aside
 My works that have not been published include manuscripts that are still in preparation and guidelines for coding new behaviors on the Rorschach task. These guidelines were used in some of my published work, but never published independently.
