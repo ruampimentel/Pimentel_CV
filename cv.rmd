@@ -30,13 +30,16 @@ CV <- create_CV_object(
   pdf_mode = params$pdf_mode
 )
 
-zotero <- read_csv("all_pimentel_2023-02-18.csv") %>% 
+zotero <- read_csv("data/zotero_pimentel_2023-02-22.csv") %>% 
   janitor::clean_names()
 # zotero %>% glimpse()
 
 zotero_cleaned <- zotero %>%
   select(item_type:publication_title, doi, url, date, pages, num_pages, issue, volume,
          conference_name, place, type, meeting_name, publisher) %>% 
+  # remove preregistration, because it is showing as journal article
+  filter(!str_detect(author, "Open Science")) %>% 
+  
   mutate(count_authors = str_count(author, ";") + 1,
          author = str_replace_all(author,
                                   "\\b([A-Za-zçé])[A-Za-zçé]* ",
@@ -49,6 +52,8 @@ zotero_cleaned <- zotero %>%
            str_replace_all(". ;", ".;"),
          author = str_replace(author, ";(?!.*;)", " &"))
 
+
+  
 ```
 
 ```{r}
