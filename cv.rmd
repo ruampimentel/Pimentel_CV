@@ -91,27 +91,29 @@ CV %>% print_contact_info()
 ```
 
 ## Relevant skills {#skills}
+### Data Analysis
+- Statistics, Psychometrics
+- Data Visualization
+- Structural Equation Modeling
+- Machine Learning Models
+- LLM prompt engineering
 
--   Statistics
--   Data Visualization
--   Multivariate Analysis
--   Structural Equation Modeling
--   Psychometrics
+### Tech
+- R, Rstudio
+- git, github
+- Others: MS office, SPSS
 
 ## Language {#language}
 
 ```{r rskills, dev.args = list(bg = 'transparent')}
 # function from helper_functions.R
 build_skill_bars(CV$skills, "language")
-
 ```
 
 ## Disclaimer {#disclaimer}
 
 Made with the R package [**pagedown**](https://github.com/rstudio/pagedown).
-
 The source code is available [on github.com/ruampimentel/ Pimentel_CV](https://github.com/ruampimentel/Pimentel_CV).
-
 Last updated on `r Sys.Date()`.
 
 
