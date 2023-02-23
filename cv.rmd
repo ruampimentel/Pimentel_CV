@@ -229,11 +229,9 @@ print_output_section(zotero_cleaned, "presentation")
 ## Conference Paper {data-icon="newspaper-o"}
 
 
-
 ```{r}
 print_output_section(zotero_cleaned, "conferencePaper")
 ```
-
 
 
 ## Unpublished Work {data-icon="pencil"}
