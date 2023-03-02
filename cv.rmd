@@ -106,7 +106,7 @@ CV %>% print_contact_info()
 ### Tech
 - R, Rstudio
 - git, github
-- Others: MS office, SPSS
+- MPlus, SPSS
 
 ## Language {#language}
 
