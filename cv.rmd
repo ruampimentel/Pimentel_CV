@@ -101,7 +101,6 @@ CV %>% print_contact_info()
 - Data Visualization
 - Structural Equation Modeling
 - Machine Learning Models
-- LLM prompt engineering
 
 ### Tech
 - R, Rstudio
@@ -206,7 +205,7 @@ CV %<>% print_section('teaching_positions')
 
 ## Publications {data-icon="book"}
 ::: aside
-My main responsibility in studies where I was not the first author involved data collection, data cleaning, data analysis, data visualization, and writing up results.
+My main responsibility as co-author involved data collection, data cleaning, data analysis, data visualization, or writing up results.
 :::
 
 ```{r}
