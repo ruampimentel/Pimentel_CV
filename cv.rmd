@@ -111,8 +111,10 @@ CV %>% print_contact_info()
 ## Language {#language}
 
 ```{r rskills, dev.args = list(bg = 'transparent')}
+
 # function from helper_functions.R
 build_skill_bars(CV$skills, "language")
+
 ```
 
 ## Disclaimer {#disclaimer}
@@ -138,6 +140,12 @@ CV %<>% print_text_block("intro")
 CV %<>% print_section('education')
 ```
 <br> <br> <br>
+
+## Relevant Courses and Workshops {data-icon="laptop"}
+
+```{r}
+CV %<>% print_section('relevant_courses')
+```
 
 ## Research Experience {data-icon="laptop"}
 
