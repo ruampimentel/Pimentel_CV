@@ -145,10 +145,13 @@ CV %<>% print_section('education')
 ```{r}
 CV %<>% print_section('relevant_courses')
 ```
+<<<<<<< HEAD
 
 <br> <br> <br>
 =======
 
+=======
+>>>>>>> parent of 62965ca (removing psychological tests and adding /newpage)
 
 ## Research Experience {data-icon="laptop"}
 
