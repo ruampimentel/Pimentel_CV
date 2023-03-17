@@ -138,16 +138,18 @@ CV %<>% print_text_block("intro")
 ```{r}
 CV %<>% print_section('education')
 ```
-
-\newpage
+<br> <br> <br>
 
 ## Relevant Courses and Workshops {data-icon="laptop"}
 
 ```{r}
 CV %<>% print_section('relevant_courses')
 ```
+<<<<<<< HEAD
 
 <br> <br> <br>
+=======
+>>>>>>> parent of 62965ca (removing psychological tests and adding /newpage)
 
 ## Research Experience {data-icon="laptop"}
 
@@ -169,7 +171,7 @@ CV %<>% print_section('research_positions')
 <!-- These breaks just force a new page so section doesnt get cut off -->
 
 
-\newpage
+<br> <br> 
 
 ## Teaching Experience {data-icon="chalkboard-teacher"}
 
@@ -182,7 +184,9 @@ CV %<>% print_text_block('teaching_experience_aside')
 ```{r}
 CV %<>% print_section('teaching_positions')
 ```
-
+<br> <br>
+<br> <br>
+<br> <br>
 
 ```{r}
 
@@ -210,8 +214,6 @@ CV %<>% print_section('teaching_positions')
 ```{r}
 # CV %<>% print_section('academic_articles')
 ```
-
-\newpage
 
 ## Publications {data-icon="book"}
 ::: aside
