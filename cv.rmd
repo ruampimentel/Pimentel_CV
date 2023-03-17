@@ -150,7 +150,6 @@ CV %<>% print_section('education')
 ```
 
 
-<br> <br> <br>
 =======
 
 =======
