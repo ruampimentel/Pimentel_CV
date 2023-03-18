@@ -159,19 +159,6 @@ CV %<>% print_section('research_positions')
 ```
 
 
-::: aside
-```{r}
-# CV %<>% print_text_block('industy_experience_aside')
-```
-:::
-
-```{r}
-# CV %<>% print_section('industry_positions')
-```
-
-<!-- These breaks just force a new page so section doesnt get cut off -->
-
-
 
 ## Teaching Experience {data-icon="chalkboard-teacher"}
 
@@ -186,36 +173,7 @@ CV %<>% print_section('teaching_positions')
 ```
 
 
-
-```{r}
-
-# cv_data %>% glimpse()
-# cv_data %>%
-#   mutate(author = str_replace_all(author, "Pimentel", "**Pimentel**" ),
-#          publication_title = if_else(!is.na(publication_title),
-#                                     paste0("*", publication_title, "*"),
-#                                     publication_title)
-#          ) %>%
-#   filter(item_type == "manuscript")
-#   glimpse()
-
-# not_all_na <- function(x) any(!is.na(x))
-# not_any_na <- function(x) all(!is.na(x))
-# 
-# 
-# zotero_cleaned %>%
-#   filter(item_type == "thesis") %>%
-#   arrange(desc(date), author) %>%
-#   # select(where(not_all_na)) %>%
-#   glimpse()
-```
-
-```{r}
-# CV %<>% print_section('academic_articles')
-```
-
-
-## Publications {data-icon="book"}
+## Peer Reviewed Publications {data-icon="book"}
 ::: aside
 ```{r}
 CV %<>% print_text_block('publications_aside')
@@ -241,7 +199,7 @@ CV %<>% print_text_block('conference_presentation_aside')
 print_output_section(zotero_cleaned, "presentation")
 ```
 
-## Conference Paper {data-icon="newspaper-o"}
+## Conference Papers {data-icon="newspaper-o"}
 
 
 ```{r}
@@ -264,7 +222,7 @@ print_output_section(zotero_cleaned, "thesis")
 
 
 
-## Miscellaneous
+## Miscellaneous - Skills and Hobbies
 
 ```{r}
 CV %<>% print_section('miscellaneous')

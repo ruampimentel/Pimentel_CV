@@ -1,11 +1,9 @@
 ﻿Id used for finding text block,Contents of text block. Supports markdown formatting.
 loc,text
-intro,"I have experience conducting research on psychological assessment and currently I am focusing on how to improve and have new approaches to the Rorschach Method. I am also intrigued by the potential of multimethod psychological measures and how different mental states effect perception.
-
-My current goal is to get more experience with *Natural Language Processing* and apply it to psychological assessment methods, specifically, to the Rorschach task."
+intro,"I have experience conducting research on psychological assessment and currently I am focusing on how to improve and have new approaches to the Rorschach Method. I am also intrigued by the potential of multimethod psychological assesment and how different mental states effect perception. My current goal is to get more experience with *Machine Learning* and *Natural Language Processing* and apply it to psychological assessment methods, specifically, to the Rorschach task."
 industy_experience_aside,  
 teaching_experience_aside,"I firmly believe that education is a powerful tool for creating positive change in the world. My experience so far has primarily been in practical applications, and I always strive to encourage my students to go beyond what is taught in the classroom and learn for themselves."
 data_science_writing_aside,  
 publications_aside,"My main responsibility as co-author involved data collection, data cleaning, data analysis, data visualization, or writing up results."
-conference_presentation_aside,I have presented most of my work at conferences so far. I am now transitioning to publishing it more in journals rather than just in conferences.
+conference_presentation_aside,I have presented most of my work at conferences so far. Presenting in conferences has gotten me insghtful feedback that I am currently adding to working papers before submissions.
 unpublished_work_aside,"My works that have not been published include manuscripts that are still in preparation and guidelines for coding new behaviors on the Rorschach task. These guidelines were used in some of my published work, but never published independently."
