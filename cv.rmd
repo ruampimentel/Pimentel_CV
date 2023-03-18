@@ -217,11 +217,14 @@ CV %<>% print_section('teaching_positions')
 
 ## Publications {data-icon="book"}
 ::: aside
-My main responsibility as co-author involved data collection, data cleaning, data analysis, data visualization, or writing up results.
+```{r}
+CV %<>% print_text_block('publications_aside')
+```
 :::
 
 ```{r}
 print_output_section(zotero_cleaned, "journalArticle")
+# CV %<>% print_section('journalArticle')
 ```
 
 
@@ -229,7 +232,9 @@ print_output_section(zotero_cleaned, "journalArticle")
 
 
 ::: aside
-I have presented most of my work at conferences so far. I am now transitioning to publishing it more in journals rather than just in conferences.
+```{r}
+CV %<>% print_text_block('conference_presentation_aside')
+```
 :::
 
 ```{r}
@@ -248,7 +253,9 @@ print_output_section(zotero_cleaned, "conferencePaper")
 ## Unpublished Work {data-icon="pencil"}
 
 ::: aside
-My works that have not been published include manuscripts that are still in preparation and guidelines for coding new behaviors on the Rorschach task. These guidelines were used in some of my published work, but never published independently.
+```{r}
+CV %<>% print_text_block('unpublished_work_aside')
+```
 :::
 
 ```{r}
