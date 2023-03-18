@@ -207,7 +207,7 @@ print_output_section(zotero_cleaned, "conferencePaper")
 
 \newpage
 
-## Unpublished Work {data-icon="pencil"}
+## Working Papers and Unpublished Work {data-icon="pencil"}
 
 ::: aside
 ```{r}
