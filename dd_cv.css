@@ -141,10 +141,12 @@ sup {
 @page :left {
   @top-right {
     content: "Page " counter(page) " of " counter(pages);
+    font-size: 8pt;
   }
 }
 @page :right {
   @top-right {
     content: "Page " counter(page) " of " counter(pages);
+    font-size: 8pt;
   }
 }
