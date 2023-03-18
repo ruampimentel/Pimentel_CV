@@ -136,3 +136,15 @@ sup {
   margin: 0.5rem;
   box-shadow: 1px 1px 4px black;
 }
+
+/*Add page number to the bottom left of the left and right pages */
+@page :left {
+  @top-right {
+    content: "Page " counter(page) " of " counter(pages);
+  }
+}
+@page :right {
+  @top-right {
+    content: "Page " counter(page) " of " counter(pages);
+  }
+}
