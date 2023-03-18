@@ -146,13 +146,9 @@ CV %<>% print_section('education')
 ```{r}
 ## Relevant Courses and Workshops {data-icon="laptop"}
 
-# CV %<>% print_section('relevant_courses')
+CV %<>% print_section('relevant_courses')
 ```
 
-
-=======
-
-=======
 
 ## Research Experience {data-icon="laptop"}
 

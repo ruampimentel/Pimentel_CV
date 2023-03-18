@@ -114,16 +114,16 @@ sanitize_links <- function(cv, text){
       # add links to links array
       cv$links <- c(cv$links, link_destinations)
 
-      # Build map of link destination to superscript
-      link_superscript_mappings <- purrr::set_names(
-        paste0("<sup>", (1:n_new_links) + n_links, "</sup>"),
-        paste0("(", link_destinations, ")")
-      )
-
-      # Replace the link destination and remove square brackets for title
-      text <- text %>%
-        stringr::str_replace_all(stringr::fixed(link_superscript_mappings)) %>%
-        stringr::str_replace_all('\\[(.+?)\\]', "\\1")
+      # # Build map of link destination to superscript
+      # link_superscript_mappings <- purrr::set_names(
+      #   paste0("<sup>", (1:n_new_links) + n_links, "</sup>"),
+      #   paste0("(", link_destinations, ")")
+      # )
+      # 
+      # # Replace the link destination and remove square brackets for title
+      # text <- text %>%
+      #   stringr::str_replace_all(stringr::fixed(link_superscript_mappings)) %>%
+      #   stringr::str_replace_all('\\[(.+?)\\]', "\\1")
     }
   }
 
